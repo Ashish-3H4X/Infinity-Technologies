@@ -18,10 +18,12 @@ const handleChange = (e) => {
   });
 };
 
+
+
 const handleSubmit = async (e) => {
   e.preventDefault();
 const res = await fetch(
-  `${import.meta.env.VITE_API_BASE_URL}/api/contact`,
+  `${import.meta.env.VITE_API_BASE_URL}api/contact`,
   {
     method: "POST",
     headers: {
