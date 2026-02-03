@@ -18,12 +18,18 @@ router.post("/", async (req, res) => {
 
     // 2. Mail transporter
     const transporter = nodemailer.createTransport({
-      service: "gmail",
+      host: "smtp.gmail.com",
+      port: 465,
+      secure: true,
+
       auth: {
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASS,
       },
     });
+
+    // Verify transporter early to surface auth/network issues
+    await transporter.verify();
 
     const ticketId = `INF-${Math.floor(1000000 + Math.random() * 9000000)}`;
     // 3. Mail to ADMIN (you)
@@ -235,10 +241,10 @@ router.post("/", async (req, res) => {
       message: "Form submitted successfully",
     });
   } catch (error) {
-    console.log(error);
+    console.log("Contact form error:", error);
     res.status(500).json({
       success: false,
-      message: "Server error",
+      message: error?.message || "Server error",
     });
   }
 });

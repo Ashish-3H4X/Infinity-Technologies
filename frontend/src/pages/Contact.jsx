@@ -20,8 +20,9 @@ const handleChange = (e) => {
 
 const handleSubmit = async (e) => {
   e.preventDefault();
-
-  const res = await fetch("https://infinity-technologies.onrender.com/api/contact", {
+const res = await fetch(
+  `${import.meta.env.VITE_API_BASE_URL}/api/contact`,
+  {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
