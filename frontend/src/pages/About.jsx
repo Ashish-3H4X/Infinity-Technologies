@@ -5,11 +5,11 @@ import Footer from "../component/Footer";
 export default function About() {
   return (
     <>
-      <Navbar />
-      <main className="min-h-screen">
+      <Navbar /> 
+      <main className="min-h-screen bg-gradient-to-br from-gray-100 via-pink-100 to-purple-100">
         <div className="pt-20 overflow-hidden">
           {/* Hero Section */}
-          <section className="relative py-32 px-6 bg-gradient-to-b from-gray-100 to-white">
+          <section className="relative py-32 px-6">
             <div className="absolute inset-0 overflow-hidden">
               <div className="absolute top-20 right-20 w-72 h-72 bg-blue-500/30 rounded-full blur-3xl"></div>
               <div className="absolute bottom-20 left-20 w-96 h-96 bg-purple-500/30 rounded-full blur-3xl"></div>
@@ -68,7 +68,7 @@ export default function About() {
           </section>
 
           {/* Values Section */}
-          <section className="py-32 px-6 bg-gray-100">
+          <section className="py-12 px-6">
             <div className="container mx-auto max-w-6xl text-center mb-16">
               <h2 className="text-5xl font-bold mb-4">Our Values</h2>
               <p className="text-gray-600">The principles that guide everything we do</p>
@@ -107,7 +107,7 @@ export default function About() {
           </section>
 
           {/* Stats Section */}
-          <section className="py-32 px-6">
+          <section className="py-24 px-6">
             <div className="container mx-auto max-w-5xl grid grid-cols-2 md:grid-cols-3 gap-8 text-center">
               {[
                 { count: "25+", label: "Countries Served", color: "from-purple-500 to-pink-500" },

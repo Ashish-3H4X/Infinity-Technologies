@@ -15,6 +15,7 @@ export default function Footer() {
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.6, ease: "easeOut" }}
     >
+      <div className="w-full h-[2px] bg-gradient-to-r from-transparent via-black/30 to-transparent bg-[length:200%_200%]" />
       <div className="max-w-7xl mx-auto px-6 py-12 backdrop-blur-sm">
         {/* Top section */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
@@ -24,12 +25,12 @@ export default function Footer() {
             <div className="flex items-center gap-2 mb-4">
               <div className="w-8 h-8 bg-black rounded-md" />
               <span className="text-lg font-semibold text-gray-900">
-                Infinity Tech Solutions
+                Infinity Technologies Pvt.Ltd.
               </span>
             </div>
 
             <p className="text-sm text-black-700 max-w-xs">
-              Infinity Tech Solutions provide web-based services and software solutions using
+              Infinity Technologies provide web-based services and software solutions using
               PHP, Laravel, and modern full-stack technologies to ensure speed,
               scalability, and reliability. We build responsive, data-driven
               applications that help businesses make confident decisions.
@@ -97,7 +98,7 @@ export default function Footer() {
  {/* Bottom section */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-gray-600">
           <span className="text-center sm:text-left">
-            © 2027 <span className="text-indigo-400">Infinity Tech Solutions.</span> All rights reserved.
+            © 2027 <span className="text-indigo-400">Infinity Technologies</span> All rights reserved.
           </span>
           <div className="flex gap-6">
             <NavLink href="/privacypolicy" className="hover:text-blue">Privacy Policy</NavLink>

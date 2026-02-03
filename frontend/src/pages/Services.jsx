@@ -2,11 +2,20 @@ import React from "react";
 import Navbar from "../component/Navbar";
 import Footer from "../component/Footer";
 import { Link, useNavigate } from "react-router-dom";
+import {
+  FaCloud,
+  FaCode,
+  FaShieldAlt,
+  FaChartBar,
+  FaLightbulb,
+  FaMobileAlt,
+} from "react-icons/fa";
 
 export default function Services() {
   const navigate = useNavigate();
   const services = [
     {
+      icon: FaCloud,
       title: "Cloud Solutions",
       color: "from-blue-500 to-cyan-500",
       bg: "from-blue-50 to-cyan-50",
@@ -18,6 +27,7 @@ export default function Services() {
       ],
     },
     {
+      icon: FaCode,
       title: "Custom Software Development",
       color: "from-purple-500 to-pink-500",
       bg: "from-purple-50 to-pink-50",
@@ -29,6 +39,7 @@ export default function Services() {
       ],
     },
     {
+      icon: FaShieldAlt,
       title: "Cybersecurity",
       color: "from-orange-500 to-red-500",
       bg: "from-orange-50 to-red-50",
@@ -40,6 +51,7 @@ export default function Services() {
       ],
     },
     {
+      icon: FaChartBar,
       title: "Data Analytics",
       color: "from-green-500 to-emerald-500",
       bg: "from-green-50 to-emerald-50",
@@ -51,6 +63,7 @@ export default function Services() {
       ],
     },
     {
+      icon: FaLightbulb,
       title: "IT Consulting",
       color: "from-indigo-500 to-blue-500",
       bg: "from-indigo-50 to-blue-50",
@@ -62,6 +75,7 @@ export default function Services() {
       ],
     },
     {
+      icon: FaMobileAlt,
       title: "Mobile Solutions",
       color: "from-pink-500 to-rose-500",
       bg: "from-pink-50 to-rose-50",
@@ -82,16 +96,14 @@ export default function Services() {
   return (
     <>
       <Navbar />
-      <main className="min-h-screen pt-19 overflow-hidden">
-        <section className="relative py-12 px-6 bg-gradient-to-b from-gray-200 to-white">
-          <div className="absolute inset-0 overflow-hidden">
-            <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/25 rounded-full blur-3xl" />
-            <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-500/25 rounded-full blur-3xl" />
-            <div className="absolute top-1/2 left-1/2 w-80 h-80 bg-green-500/20 rounded-full blur-3xl" />
-          </div>
+      <main className="min-h-screen bg-gradient-to-br from-blue-100 via-pink-100 to-purple-100 pt-19 overflow-hidden">
+        <div className="absolute top-1/2 left-1/2 w-80 h-80 bg-green-500/20 rounded-full blur-3xl" />
+        <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/25 rounded-full blur-3xl" />
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-500/25 rounded-full blur-3xl" />
+        <section className="relative py-12 px-6">
           <div className="container mx-auto relative z-10 text-center max-w-4xl">
-            <div className="inline-block mb-6 px-6 py-2 rounded-full bg-gradient-to-r from-blue-100 to-purple-100">
-              <span className="text-sm font-medium bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+            <div className="inline-block mb-6 px-6 py-2 bg-white/40 rounded-full">
+              <span className="text-sm font-medium bg-gradient-to-r from-blue-900 to-purple-600 bg-clip-text text-transparent">
                 we have Infinity solutions
               </span>
             </div>
@@ -106,31 +118,42 @@ export default function Services() {
             </p>
           </div>
         </section>
+
         <section className="py-24 px-6 relative">
           <div className="container mx-auto max-w-7xl grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((s, i) => (
-              <div
-                key={i}
-                className={`p-8 rounded-xl border-2 shadow-sm hover:shadow-2xl transition-all duration-500 bg-gradient-to-br ${s.bg}`}>
+            {services.map((s, i) => {
+              const Icon = s.icon;
+
+              return (
                 <div
-                  className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${s.color} flex items-center justify-center mb-6 shadow-lg`}>
-                  <span className="text-white text-2xl">⚡</span>
+                  key={i}
+                  className={`p-8 rounded-xl border-2 shadow-sm hover:shadow-2xl transition-all duration-500 bg-gradient-to-br ${s.bg}`}
+                >
+                  <div
+                    className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${s.color} flex items-center justify-center mb-6 shadow-lg`}
+                  >
+                    <Icon className="text-white text-2xl" />
+                  </div>
+
+                  <h3 className="text-2xl font-bold mb-4">{s.title}</h3>
+
+                  <ul className="space-y-3">
+                    {s.points.map((p, idx) => (
+                      <li
+                        key={idx}
+                        className="flex items-start gap-3 text-sm text-gray-600"
+                      >
+                        <span className="text-blue-600 mt-0.5">✔</span>
+                        {p}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-                <h3 className="text-2xl font-bold mb-4">{s.title}</h3>
-                <ul className="space-y-3">
-                  {s.points.map((p, idx) => (
-                    <li
-                      key={idx}
-                      className="flex items-start gap-3 text-sm text-gray-600">
-                      <span className="text-blue-600 mt-0.5">✔</span>
-                      {p}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </section>
+
         <section className="max-w-6xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-10 items-center">
           <div>
             <h1 className="text-4xl md:text-5xl font-semibold leading-tight">
@@ -140,10 +163,16 @@ export default function Services() {
               Simple, clean and scalable UI built with React and Tailwind CSS.
             </p>
             <div className="mt-6 flex gap-4">
-              <button onClick={() => (navigate("/contact"))} className="bg-blue-600 text-white px-6 py-3 rounded-lg">
+              <button
+                onClick={() => navigate("/contact")}
+                className="bg-blue-600 text-white px-6 py-3 rounded-lg"
+              >
                 Get Started
               </button>
-              <button onClick={() => (navigate("/pricing"))} className="border border-blue-600 text-blue-600 px-6 py-3 rounded-lg">
+              <button
+                onClick={() => navigate("/pricing")}
+                className="border border-blue-600 text-blue-600 px-6 py-3 rounded-lg"
+              >
                 See plans
               </button>
             </div>
@@ -151,9 +180,10 @@ export default function Services() {
           <img
             src="src\images\servicetrns.png"
             alt="process"
-            className="w-full h-[400px]  object-cover rounded-xl" />
+            className="w-full h-[400px]  object-cover rounded-xl"
+          />
         </section>
-        <section className="py-32 px-6 bg-gray-50">
+        <section className="py-32 px-6">
           <div className="container mx-auto max-w-6xl text-center mb-20">
             <h2 className="text-5xl font-bold mb-6">How We Work</h2>
             <p className="text-xl text-gray-600">
@@ -200,7 +230,7 @@ export default function Services() {
             ))}
           </div>
         </section>
-        <div className="bg-pink-400/10 py-16 px-6">
+        <div className=" py-16 px-6">
           <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
             <div>
               <h2 className="text-3xl font-bold text-gray-900">
@@ -222,11 +252,12 @@ export default function Services() {
             <img
               src="/src/images/servicetrns1.png"
               alt="Why choose us"
-              className="w-full h-[400px] object-cover rounded-xl shadow" />
+              className="w-full h-[400px] object-cover rounded-xl shadow"
+            />
           </div>
         </div>
         <section className="py-12 px-6">
-          <div className="container mx-auto max-w-4xl text-center bg-gradient-to-r from-blue-400/10 via-purple-400/10 to-blue-400/10 rounded-3xl p-16 text-black shadow-2xl relative overflow-hidden">
+          <div className="container hover:scale-110 transition mx-auto max-w-4xl text-center bg-gradient-to-r from-blue-400/10 via-purple-400/10 to-blue-400/10 rounded-3xl p-16 text-black shadow-2xl relative overflow-hidden">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               Ready to Get Started?
             </h2>

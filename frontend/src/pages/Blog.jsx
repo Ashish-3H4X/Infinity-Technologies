@@ -38,10 +38,10 @@ export default function Blog() {
   return (
     <>
       <Navbar />
-      <main className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+      <main className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
         {/* Hero Section */}
         <section className="relative py-28 px-6 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-purple-50"></div>
+          <div className="absolute inset-0 "></div>
 
           <div className="absolute top-20 left-20 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl"></div>
           <div className="absolute bottom-20 right-20 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl"></div>
@@ -100,7 +100,7 @@ export default function Blog() {
         {/* Call to Action */}
         <section className="py-18 px-6">
           <div className="container mx-auto max-w-4xl">
-            <div className="rounded-3xl bg-purple-400/20 p-16 text-center text-black shadow-2xl">
+            <div className="rounded-3xl bg-purple-400/10 p-16 text-center text-black shadow-2xl">
               <h2 className="text-4xl font-bold mb-6">
                 Want more tech insights?
               </h2>

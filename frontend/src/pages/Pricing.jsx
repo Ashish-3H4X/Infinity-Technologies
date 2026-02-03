@@ -7,7 +7,6 @@ export default function Pricing() {
   const standardPlans = [
     {
       title: "Basic",
-      price: "₹7,499",
       color: "blue",
       gradient: "from-blue-500 to-cyan-500",
       bg: "from-blue-50 to-cyan-50",
@@ -22,7 +21,6 @@ export default function Pricing() {
     },
     {
       title: "Standard",
-      price: "₹13,499",
       color: "purple",
       popular: true,
       gradient: "from-purple-500 to-blue-500",
@@ -40,7 +38,6 @@ export default function Pricing() {
     },
     {
       title: "Enterprise",
-      price: "Custom",
       color: "orange",
       gradient: "from-orange-500 to-red-500",
       bg: "from-orange-50 to-red-50",
@@ -60,7 +57,6 @@ export default function Pricing() {
   const ecommercePlans = [
     {
       title: "E-Commerce Basic",
-      price: "₹24,499",
       color: "blue",
       gradient: "from-blue-500 to-cyan-500",
       bg: "from-blue-50 to-cyan-50",
@@ -77,7 +73,6 @@ export default function Pricing() {
     },
     {
       title: "E-Commerce Standard",
-      price: "₹49,999",
       color: "purple",
       popular: true,
       gradient: "from-purple-500 to-blue-500",
@@ -96,7 +91,6 @@ export default function Pricing() {
     },
     {
       title: "E-Commerce Enterprise",
-      price: "Custom",
       color: "orange",
       gradient: "from-orange-500 to-red-500",
       bg: "from-orange-50 to-red-50",
@@ -137,46 +131,6 @@ export default function Pricing() {
     },
   ];
 
-  const plans = [
-    {
-      name: "Basic",
-      price: "₹999",
-      desc: "Best for individuals and small projects",
-      features: [
-        "Single page website",
-        "Responsive design",
-        "Basic SEO",
-        "Email support",
-      ],
-    },
-    {
-      name: "Standard",
-      price: "₹2,499",
-      desc: "Perfect for growing businesses",
-      featured: true,
-      features: [
-        "Up to 5 pages",
-        "Fully responsive",
-        "On-page SEO",
-        "Contact form",
-        "WhatsApp integration",
-        "Priority support",
-      ],
-    },
-    {
-      name: "Premium",
-      price: "₹5,999",
-      desc: "For serious brands and startups",
-      features: [
-        "Unlimited pages",
-        "Custom UI/UX",
-        "Advanced SEO",
-        "Admin dashboard",
-        "Payment integration",
-        "24/7 support",
-      ],
-    },
-  ];
   return (
     <>
       <Navbar />
@@ -276,17 +230,6 @@ function PlanCard({ plan }) {
 
       <h3 className="text-2xl font-bold mb-3">{plan.title}</h3>
 
-      <div className="mb-6">
-        <span
-          className={`text-4xl font-bold bg-gradient-to-r ${plan.gradient} bg-clip-text text-transparent`}
-        >
-          {plan.price}
-        </span>
-        {plan.price !== "Custom" && (
-          <span className="text-sm text-gray-500 ml-2">/month</span>
-        )}
-      </div>
-
       <ul className="space-y-3 mb-8">
         {plan.features.map((f, i) => (
           <li key={i} className="flex items-start gap-3 text-sm text-gray-600">
@@ -300,7 +243,7 @@ function PlanCard({ plan }) {
         <button
           className={`w-full py-4 rounded-full text-white font-semibold bg-gradient-to-r ${plan.gradient} hover:shadow-xl transition-all`}
         >
-          Get Started
+          Contact us
         </button>
       </Link>
     </div>
