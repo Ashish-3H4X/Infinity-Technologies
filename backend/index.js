@@ -12,6 +12,10 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+app.get("/", (req, res) => {
+  res.send("Infinity Backend is Running 🚀");
+});
+
 app.use("/api/contact", contactRoute);
 
 const PORT = process.env.PORT || 5000;
