@@ -15,7 +15,7 @@ export default function Home() {
   function FeatureCard({ title, desc, gradient }) {
     return (
       <div
-        className={`p-10 rounded-xl shadow-sm hover:shadow-2xl transition-all border-2 bg-gradient-to-br ${gradient}`}
+        className={`p-10 rounded-xl shadow-sm hover:shadow-2xl transition-all border-2 border-blue-400/30 bg-gradient-to-br ${gradient}`}
       >
         <h3 className="text-2xl font-bold mb-4">{title}</h3>
         <p className="text-gray-600 text-lg">{desc}</p>

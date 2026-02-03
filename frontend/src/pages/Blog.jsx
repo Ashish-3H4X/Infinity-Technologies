@@ -29,8 +29,7 @@ export default function Blog() {
       category: "Development",
       image:
         "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=600&fit=crop",
-      description:
-        "React simplifies UI development with reusable components.",
+      description: "React simplifies UI development with reusable components.",
       date: "Jan 8, 2026",
     },
   ];
@@ -38,21 +37,21 @@ export default function Blog() {
   return (
     <>
       <Navbar />
-      <main className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
+      <main className="min-h-screen bg-gradient-to-br from-blue-500/20 via-pink-500/200 to-purple-500/20">
         {/* Hero Section */}
+        <div className="absolute top-20 left-20 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 right-20 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl"></div>
         <section className="relative py-28 px-6 overflow-hidden">
-          <div className="absolute inset-0 "></div>
-
-          <div className="absolute top-20 left-20 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-20 right-20 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl"></div>
-
           <div className="container mx-auto relative z-10 text-center max-w-4xl">
             <span className="inline-block px-4 py-2 rounded-full bg-gradient-to-r from-blue-100 to-purple-100 mb-6 text-sm font-medium">
               Latest Insights
             </span>
 
             <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-              Our <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 bg-clip-text text-transparent">Blog</span>
+              Our{" "}
+              <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 bg-clip-text text-transparent">
+                Blog
+              </span>
             </h1>
             <p className="text-xl text-gray-600">
               Explore technology, innovation, and digital transformation.
@@ -66,12 +65,14 @@ export default function Blog() {
               {blogs.map((blog) => (
                 <div
                   key={blog.id}
-                  className="rounded-2xl overflow-hidden shadow-lg bg-white border border-gray-200 hover:shadow-2xl transition-all">
+                  className="rounded-2xl overflow-hidden shadow-lg bg-white border border-gray-200 hover:shadow-2xl transition-all"
+                >
                   <div className="relative aspect-[4/3]">
                     <img
                       src={blog.image}
                       alt={blog.title}
-                      className="w-full h-full object-cover" />
+                      className="w-full h-full object-cover"
+                    />
                     <div className="absolute inset-0 bg-gradient-to-tr from-blue-600/20 to-purple-600/20"></div>
                   </div>
                   <div className="p-6">
@@ -116,5 +117,5 @@ export default function Blog() {
       </main>
       <Footer />
     </>
-  )
+  );
 }

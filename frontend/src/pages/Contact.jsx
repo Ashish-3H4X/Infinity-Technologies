@@ -91,7 +91,7 @@ const handleSubmit = async (e) => {
               </p>
               <div className="space-y-6">
                 <InfoCard
-                  gradient="from-blue-50 to-cyan-50"
+                  gradient="from-blue-50  to-cyan-50"
                   icon="📧"
                   title="Email"
                   line1="infinitytechnology50@gmail.com"
@@ -114,7 +114,7 @@ const handleSubmit = async (e) => {
                 />
               </div>
             </div>
-            <div className="rounded-xl p-10 backdrop-blur-sm bg-gradient-to-br from-blue-50/50 to-purple-50/50 border-2 shadow-xl">
+            <div className="rounded-xl p-10 backdrop-blur-sm bg-gradient-to-br from-blue-50/50 to-purple-50/50 border-2 border-blue-400/30 shadow-xl">
               <h2 className="text-3xl font-bold mb-8">Send us a Message</h2>
               <form className="space-y-6" onSubmit={handleSubmit}>
                 <Input
@@ -163,7 +163,7 @@ const handleSubmit = async (e) => {
             </div>
           </div>
         </section>
-        <section className="py-32 px-6 bg-white/30 shadow-2xl relative overflow-hidden">
+        <section className="py-32 px-6 shadow-2xl relative overflow-hidden">
           <div className="absolute top-1/3 left-1/4 w-96 h-96 bg-blue-500/25 rounded-full blur-3xl" />
           <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/25 rounded-full blur-3xl" />
           <div className="container mx-auto relative z-10 text-center">
@@ -194,7 +194,7 @@ const handleSubmit = async (e) => {
 function InfoCard({ gradient, icon, title, line1, line2 }) {
   return (
     <div
-      className={`p-8 rounded-xl shadow-sm hover:shadow-xl transition-all border-2 bg-gradient-to-br ${gradient}`}
+      className={`p-8 rounded-xl shadow-sm hover:shadow-xl transition-all border-2 border-blue-400/30 bg-gradient-to-br ${gradient}`}
     >
       <div className="flex items-start gap-4">
         <div className="w-14 h-14 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500 flex items-center justify-center text-white text-2xl shadow-lg">

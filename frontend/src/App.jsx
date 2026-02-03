@@ -8,7 +8,6 @@ import Pricing from "./pages/Pricing";
 import Contact from "./pages/Contact";
 import Cursor from "./component/Cursor";
 import Whatsapp from "./component/Whatsapp";
-import Feedback from "./component/Feedback";
 
 function App() {
   return (
@@ -19,7 +18,6 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<Services />} />
-          <Route path="/feedback" element={<Feedback />} />
           <Route path="/about" element={<About />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/pricing" element={<Pricing />} />

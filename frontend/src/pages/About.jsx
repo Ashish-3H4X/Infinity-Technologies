@@ -43,7 +43,7 @@ export default function About() {
           {/* Mission and Vision */}
           <section className="py-32 px-6 relative">
             <div className="container mx-auto max-w-6xl grid md:grid-cols-2 gap-8">
-              <div className="p-10 rounded-xl border-2 bg-gradient-to-br from-blue-50 to-cyan-50 shadow-lg">
+              <div className="p-10 rounded-xl  border-2 border-blue-400/30 bg-gradient-to-br from-blue-50 to-cyan-50 shadow-lg">
                 <div className="w-16 h-16 rounded-2xl bg-gradient-to-r from-blue-600 to-purple-600 flex items-center justify-center mb-6 text-white">
                   🎯
                 </div>
@@ -54,7 +54,7 @@ export default function About() {
                 </p>
               </div>
 
-              <div className="p-10 rounded-xl border-2 bg-gradient-to-br from-purple-50 to-pink-50 shadow-lg">
+              <div className="p-10 rounded-xl border-2 border-blue-400/30 bg-gradient-to-br from-purple-50 to-pink-50 shadow-lg">
                 <div className="w-16 h-16 rounded-2xl bg-gradient-to-r from-purple-600 to-blue-600 flex items-center justify-center mb-6 text-white">
                   👁️
                 </div>
@@ -94,7 +94,7 @@ export default function About() {
               ].map((item, i) => (
                 <div
                   key={i}
-                  className="p-10 rounded-xl border-2 shadow-lg bg-white text-center">
+                  className="p-10 rounded-xl border-2 border-blue-400/30 shadow-lg bg-white text-center">
                   <div
                     className={`w-20 h-20 mx-auto mb-6 rounded-full bg-gradient-to-r ${item.color} flex items-center justify-center text-white text-2xl`}>
                     ⭐
@@ -107,7 +107,7 @@ export default function About() {
           </section>
 
           {/* Stats Section */}
-          <section className="py-24 px-6">
+          {/* <section className="py-24 px-6">
             <div className="container mx-auto max-w-5xl grid grid-cols-2 md:grid-cols-3 gap-8 text-center">
               {[
                 { count: "25+", label: "Countries Served", color: "from-purple-500 to-pink-500" },
@@ -127,7 +127,7 @@ export default function About() {
                 </div>
               ))}
             </div>
-          </section>
+          </section> */}
 
         </div>
       </main>

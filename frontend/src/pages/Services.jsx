@@ -104,7 +104,7 @@ export default function Services() {
           <div className="container mx-auto relative z-10 text-center max-w-4xl">
             <div className="inline-block mb-6 px-6 py-2 bg-white/40 rounded-full">
               <span className="text-sm font-medium bg-gradient-to-r from-blue-900 to-purple-600 bg-clip-text text-transparent">
-                we have Infinity solutions
+              ✨ Next-Gen IT Solutions
               </span>
             </div>
             <h1 className="text-5xl md:text-7xl font-bold mb-8 leading-tight">
@@ -127,7 +127,7 @@ export default function Services() {
               return (
                 <div
                   key={i}
-                  className={`p-8 rounded-xl border-2 shadow-sm hover:shadow-2xl transition-all duration-500 bg-gradient-to-br ${s.bg}`}
+                  className={`p-8 rounded-xl border-2 border-blue-500/30 shadow-sm hover:shadow-2xl transition-all duration-500 bg-gradient-to-br ${s.bg}`}
                 >
                   <div
                     className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${s.color} flex items-center justify-center mb-6 shadow-lg`}

@@ -57,8 +57,8 @@ export default function Navbar() {
                   to={link.href}
                   className={`relative transition text-black hover:text-blue-500
                     after:absolute after:left-0 after:-bottom-1 after:h-[2px]
-                    after:bg-red-300 after:transition-all after:duration-300
-                    ${active ? "after:w-full" : "after:w-0 hover:after:w-full"}`}
+                    after:bg-blue-500 after:transition-all after:duration-300
+                    ${active ? " bg-white/20 backdrop-blur-md border border-blue-400/30 shadow-lg py-2 px-3 rounded-full" : "after:w-0 hover:after:w-full"}`}
                 >
                   {link.name}
                 </NavLink>

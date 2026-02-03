@@ -134,11 +134,11 @@ export default function Pricing() {
   return (
     <>
       <Navbar />
-      <main className="min-h-screen pt-19">
-        <section className="relative py-12 px-6 bg-gradient-to-b from-gray-100 to-white overflow-hidden">
+      <main className="min-h-screen bg-gradient-to-br from-blue-200/70 via-pink-200/70 to-purple-200/70 pt-19">
+          <div className="absolute top-1/2 left-1/2 w-80 h-80 bg-orange-500/10 rounded-full blur-3xl" />
           <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/15 rounded-full blur-3xl" />
           <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-500/15 rounded-full blur-3xl" />
-          <div className="absolute top-1/2 left-1/2 w-80 h-80 bg-orange-500/10 rounded-full blur-3xl" />
+        <section className="relative py-12 px-6 overflow-hidden">
           <div className="container mx-auto text-center relative z-10 max-w-4xl">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-blue-100 to-purple-100 mb-8">
               <span className="text-sm font-medium">
@@ -173,7 +173,7 @@ export default function Pricing() {
             ))}
           </div>
         </section>
-        <section className="py-20 px-6 relative overflow-hidden bg-gray-50">
+        <section className="py-20 px-6 relative overflow-hidden">
           <div className="container mx-auto text-center mb-16">
             <h2 className="text-5xl font-bold mb-4">E-Commerce Solutions</h2>
             <p className="text-lg text-gray-600">
@@ -186,14 +186,14 @@ export default function Pricing() {
             ))}
           </div>
         </section>
-        <section className="py-32 px-6 bg-gray-100">
+        <section className="py-32 px-6">
           <div className="container mx-auto max-w-4xl text-center mb-20">
             <h2 className="text-5xl font-bold">Frequently Asked Questions</h2>
           </div>
           <div className="max-w-4xl mx-auto space-y-6">
             {faq.map((f, i) => (
               <div key={i}
-                className={`p-8 rounded-xl border-2 bg-gradient-to-br shadow-sm hover:shadow-xl transition-all`}>
+                className={`p-8 rounded-xl border-2 border-blue-400/30 bg-gradient-to-br shadow-sm hover:shadow-xl transition-all`}>
                 <h3 className="font-bold text-xl mb-3">{f.q}</h3>
                 <p className="text-gray-600">{f.a}</p>
               </div>
